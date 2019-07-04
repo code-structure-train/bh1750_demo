@@ -7,6 +7,7 @@ common:
   - Drivers/CMSIS/Device/ST/STM32F4xx
   - Drivers/CMSIS/Device/ST/STM32F4xx/Include
   - Drivers/CMSIS/Include
+  - Drivers/BH1750/Inc
   - Drivers/LCD1602_4W/Inc
   - Drivers/STM32F4xx_HAL_Driver
   - Drivers/STM32F4xx_HAL_Driver/Inc
@@ -25,6 +26,7 @@ common:
   - Middlewares/Third_Party/FatFs/src
   sources:
     Drivers:
+    - Drivers/BH1750/Src/bh1750.c
     - Drivers/LCD1602_4W/Src/LCD.c
     - Drivers/STM32F4xx_HAL_Driver/Src
     Middlewares:
