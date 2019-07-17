@@ -66,7 +66,7 @@ BH1750_STATUS BH1750_SetMode(bh1750_mode Mode)
 	if((Mode & 0x0F) > 3) return BH1750_ERROR;
 
 	Bh1750_Mode = Mode;
-	if(HAL_OK == HAL_I2C_Master_Transmit(bh1750_i2c, BH1750_ADDRESS, &Mode, 1, 10))
+	if(HAL_OK == HAL_I2C_Master_Transmit(bh1750_i2c, BH1750_ADDRESS, (uint8_t *)&Mode, 1, 10))
 		return BH1750_OK;
 
 	return BH1750_ERROR;
